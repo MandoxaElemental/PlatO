@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from "next/image";
 import LoginPage from "./(pages)/Login/LoginPage";
 
