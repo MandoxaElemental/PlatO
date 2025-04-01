@@ -7,7 +7,8 @@ export function NavbarComponent() {
   return (
     <Sidebar aria-label="Default sidebar example">
       <SidebarItems>
-      <img src="./assets/4.svg" alt="plato"/>
+      <img src="./assets/4.svg" alt="plato" className="block dark:hidden"/>
+      <img src="./assets/1.svg" alt="plato" className="hidden dark:block"/>
         <SidebarItemGroup>
           <SidebarItem href="/" >
             <div className="flex items-center">
@@ -44,7 +45,7 @@ export function NavbarComponent() {
             <img className="h-5 w-5" src="./assets/person.svg" alt="profile" /><p className="pl-2">Profile</p>
             </div>
           </SidebarItem>
-          <Button className="w-full text-center">Post</Button>
+          <Button className="w-full text-center" href="/Post">Post</Button>
         </SidebarItemGroup>
         <SidebarItemGroup>
           <SidebarItem href="#" >
