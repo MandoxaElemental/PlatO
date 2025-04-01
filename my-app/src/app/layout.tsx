@@ -26,15 +26,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <link rel="icon" type="image/x-icon" href="./assets/house.svg"/>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex justify-between px-5">
-          <div className="sticky top-0">
+        <div className="flex justify-between px-5 max-h-[100vh]">
+          <div className="max-h-screen overflow-y-auto scrollbar-hide">
         <NavbarComponent/>
           </div>
+          <div className="max-h-screen overflow-y-auto scrollbar-hide">
         {children}
-        <div className="sticky top-0">
+          </div>
+          <div className="max-h-screen overflow-y-auto scrollbar-hide">
         <NavbarComponentRight/>
         </div>
     </div>
