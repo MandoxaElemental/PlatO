@@ -7,8 +7,8 @@ export function NavbarComponent() {
   return (
     <Sidebar aria-label="Default sidebar example">
       <SidebarItems>
-      <img src="../assets/4.svg" alt="plato" className="block dark:hidden"/>
-      <img src="../assets/1.svg" alt="plato" className="hidden dark:block"/>
+      <img src="../assets/4.svg" alt="plato" className="block dark:hidden h-[60px]"/>
+      <img src="../assets/1.svg" alt="plato" className="hidden dark:block h-[60px]"/>
         <SidebarItemGroup>
           <SidebarItem href="/Home" >
             <div className="flex items-center">
