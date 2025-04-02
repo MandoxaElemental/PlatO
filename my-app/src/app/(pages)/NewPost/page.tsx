@@ -1,97 +1,36 @@
 'use client'
-import { Button, FileInput, TextInput } from 'flowbite-react'
-import React, { useState } from 'react'
+import Link from 'next/link'
 
 const Post = () => {
 
-    const [ingredients, setIngredients] = useState<string[]>(['']);
-    const [steps, setSteps] = useState<string[]>(['']);
-
-    const addIngredient = () => {
-      setIngredients([...ingredients, '']);
-    };
-  
-    const removeIngredient = (index: number) => {
-      const newIngredients = [...ingredients];
-      newIngredients.splice(index, 1);
-      setIngredients(newIngredients);
-    };
-    
-    const addStep = () => {
-      setSteps([...steps, '']);
-    };
-  
-    const removeStep = (index: number) => {
-      const newSteps = [...steps];
-      newSteps.splice(index, 1);
-      setSteps(newSteps);
-    };
 
   return (
-    <div className='pt-10 px-5 w-full'>
-        <div className='border-b-1 border-solid border-slate-300 p-2 text-2xl font-semibold text-center'>
-            New Recipe
+    <div className='pt-10 px-5 w-full flex flex-col text-center'>
+        <h1 className='font-2xl text-semibold pb-2'>New Post</h1>
+        <Link href={"/NewPost/Default"}>
+        <div className='hover:opacity-50 border-1 border-slate-300 h-[100px] flex items-center rounded-xl mb-2'>
+        <div className="flex justify-center items-center w-[100px] h-[100px] bg-slate-300 rounded-xl">
+            <img className='h-[50px] opacity-50' src="./assets/camera.svg" alt="camera" />
         </div>
-        <div className='border-b-1 border-solid border-slate-300 p-2'>
-            <FileInput/>
+        <div className='p-5'>Image/Video</div>
         </div>
-        <div className='border-b-1 border-solid border-slate-300 p-2 flex flex-col items-center'>
-            <TextInput placeholder='[Recipe Name]' className='w-[200px] pb-2'></TextInput>
-            <p className='text-center'>Description 200/200</p>
-            <TextInput className='w-[400px]'></TextInput>
+        </Link>
+        <Link href={"/NewPost/Recipe"}>
+        <div className='hover:opacity-50 border-1 border-slate-300 h-[100px] flex items-center rounded-xl mb-2'>
+        <div className="flex justify-center items-center w-[100px] h-[100px] bg-slate-300 rounded-xl">
+            <img className='h-[70px] opacity-50' src="./assets/pot.svg" alt="pot" />
         </div>
-        <div className='border-b-1 border-solid border-slate-300 p-2'>
-            <p className='font-semibold text-xl text-center'>Ingredients</p>
-            {ingredients.map((ingredient: string, ibx: number) => (
-                <div key={ibx} className='flex items-center px-2'>
-            <img className='h-10 w-10 pr-5 hover:opacity-50' src="./assets/x-lg.svg" alt="remove" onClick={() => removeIngredient(ibx)}/>
-                <div className="mb-4 px-1">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
-            AMOUNT
-        </label>
-        <TextInput className='w-[80px]'></TextInput>
-            </div>
-                <div className="mb-4 px-1">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
-            MEASUREMENT
-        </label>
-        <TextInput className='w-[140px]'></TextInput>
-                </div>
-                <div className="mb-4 px-1">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
-            INGREDIENT
-        </label>
-        <TextInput className='w-[300px]'></TextInput>
-                </div>
-                </div>
-            )
-        )}
-            <div className='flex justify-center items-center font-semibold hover:opacity-50 underline' onClick={addIngredient}><img className='h-6 w-6 pr-2' src="./assets/plus-circle.svg" alt="add" /><p>Add Ingredient</p></div>
+        <div className='p-5'>Recipe</div>
         </div>
-        <div className='border-b-1 border-solid border-slate-300 p-2'>
-        <p className='font-semibold text-xl text-center'>Ingredients</p>
-            {steps.map((steps: string, ibx: number) => (
-                <div key={ibx} className='flex items-center px-2'>
-            <img className='h-10 w-10 pr-5 hover:opacity-50' src="./assets/x-lg.svg" alt="remove" onClick={() => removeStep(ibx)}/>
-                <div className="mb-4 px-1">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
-            Step {ibx + 1}
-        </label>
-        <TextInput className='w-[600px]'></TextInput>
-                </div>
-                </div>
-            )
-        )}
-            <div className='flex justify-center items-center font-semibold hover:opacity-50 underline' onClick={addStep}><img className='h-6 w-6 pr-2' src="./assets/plus-circle.svg" alt="add" /><p>Add Step</p></div>
+        </Link>
+        <Link href={"/NewPost/Drafts"}>
+        <div className='hover:opacity-50 border-1 border-slate-300 h-[100px] flex items-center rounded-xl mb-2'>
+        <div className="flex justify-center items-center w-[100px] h-[100px] bg-slate-300 rounded-xl">
+            <img className='h-[50px] opacity-50' src="./assets/file-earmark-plus.svg" alt="draft" />
         </div>
-        <div className='border-b-1 border-solid border-slate-300 p-2'>
-        <p className='font-semibold text-xl text-center'>Tags</p>
-        <div className='flex justify-center items-center font-semibold hover:opacity-50 underline'><img className='h-6 w-6 pr-2' src="./assets/plus-circle.svg" alt="add" /><p>Add Tags</p></div>
+        <div className='p-5'>Drafts</div>
         </div>
-        <div className='p-2 flex justify-end'>
-            <Button outline className='mx-1 w-[100px]'>Draft</Button>
-            <Button className='mx-1 w-[100px]'>Post</Button>
-        </div>
+        </Link>
     </div>
   )
 }
