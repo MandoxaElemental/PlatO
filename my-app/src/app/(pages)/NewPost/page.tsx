@@ -29,18 +29,18 @@ const Post = () => {
 
   return (
     <div className='pt-10 px-5 w-full'>
-        <div className='border-b-1 border-solid border-slate-500 p-2 text-2xl font-semibold text-center'>
+        <div className='border-b-1 border-solid border-slate-300 p-2 text-2xl font-semibold text-center'>
             New Recipe
         </div>
-        <div className='border-b-1 border-solid border-slate-500 p-2'>
+        <div className='border-b-1 border-solid border-slate-300 p-2'>
             <FileInput/>
         </div>
-        <div className='border-b-1 border-solid border-slate-500 p-2 flex flex-col items-center'>
+        <div className='border-b-1 border-solid border-slate-300 p-2 flex flex-col items-center'>
             <TextInput placeholder='[Recipe Name]' className='w-[200px] pb-2'></TextInput>
             <p className='text-center'>Description 200/200</p>
             <TextInput className='w-[400px]'></TextInput>
         </div>
-        <div className='border-b-1 border-solid border-slate-500 p-2'>
+        <div className='border-b-1 border-solid border-slate-300 p-2'>
             <p className='font-semibold text-xl text-center'>Ingredients</p>
             {ingredients.map((ingredient: string, ibx: number) => (
                 <div key={ibx} className='flex items-center px-2'>
@@ -68,7 +68,7 @@ const Post = () => {
         )}
             <div className='flex justify-center items-center font-semibold hover:opacity-50 underline' onClick={addIngredient}><img className='h-6 w-6 pr-2' src="./assets/plus-circle.svg" alt="add" /><p>Add Ingredient</p></div>
         </div>
-        <div className='border-b-1 border-solid border-slate-500 p-2'>
+        <div className='border-b-1 border-solid border-slate-300 p-2'>
         <p className='font-semibold text-xl text-center'>Ingredients</p>
             {steps.map((steps: string, ibx: number) => (
                 <div key={ibx} className='flex items-center px-2'>
@@ -84,7 +84,7 @@ const Post = () => {
         )}
             <div className='flex justify-center items-center font-semibold hover:opacity-50 underline' onClick={addStep}><img className='h-6 w-6 pr-2' src="./assets/plus-circle.svg" alt="add" /><p>Add Step</p></div>
         </div>
-        <div className='border-b-1 border-solid border-slate-500 p-2'>
+        <div className='border-b-1 border-solid border-slate-300 p-2'>
         <p className='font-semibold text-xl text-center'>Tags</p>
         <div className='flex justify-center items-center font-semibold hover:opacity-50 underline'><img className='h-6 w-6 pr-2' src="./assets/plus-circle.svg" alt="add" /><p>Add Tags</p></div>
         </div>
