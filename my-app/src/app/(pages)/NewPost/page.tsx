@@ -5,7 +5,7 @@ const Post = () => {
 
 
   return (
-    <div className='pt-10 px-5 w-full flex flex-col text-center'>
+    <div className='pt-10 px-5 w-min-full flex flex-col text-center'>
         <h1 className='font-2xl text-semibold pb-2'>New Post</h1>
         <Link href={"/NewPost/Default"}>
         <div className='hover:opacity-50 border-1 border-slate-300 h-[100px] flex items-center rounded-xl mb-2'>

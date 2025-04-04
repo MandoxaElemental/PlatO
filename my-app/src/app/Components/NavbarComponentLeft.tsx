@@ -58,7 +58,7 @@ export function NavbarComponent() {
             <img className="h-5 w-5" src="../assets/gear.svg" alt="profile" /><p className="pl-2">Settings and Privacy</p>
             </div>
           </SidebarItem>
-          <SidebarItem href="#" >
+          <SidebarItem href="/" >
             Log Out
           </SidebarItem>
         </SidebarItemGroup>
