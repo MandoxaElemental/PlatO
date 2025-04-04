@@ -141,3 +141,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face 
+{
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+}
+
+.inter  
+{
+  font-family: "Inter";
+}
+
+.loginBG
+{
+  background-image: url("/images/LoginBG.png") format("png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
