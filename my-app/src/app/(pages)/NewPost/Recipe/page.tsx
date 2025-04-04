@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 const Recipe = () => {
 
-    const [openModal, setOpenModal] = useState(true);
+    const [openModal, setOpenModal] = useState(false);
 
     const [ingredients, setIngredients] = useState<string[]>(['']);
     const [steps, setSteps] = useState<string[]>(['']);

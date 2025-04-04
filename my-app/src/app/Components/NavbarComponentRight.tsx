@@ -1,7 +1,7 @@
 
 "use client";
 
-import { Button, Sidebar, SidebarItem, SidebarItemGroup, SidebarItems, TextInput } from "flowbite-react";
+import { Button, Sidebar, SidebarItemGroup, SidebarItems, TextInput } from "flowbite-react";
 
 export function NavbarComponentRight() {
   return (
