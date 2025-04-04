@@ -1,8 +1,10 @@
 'use client'
-import { Button, FileInput, TextInput } from 'flowbite-react'
+import { Button, FileInput, TextInput, Modal, ModalBody, ModalFooter, ModalHeader } from 'flowbite-react'
 import React, { useState } from 'react'
 
 const Recipe = () => {
+
+    const [openModal, setOpenModal] = useState(true);
 
     const [ingredients, setIngredients] = useState<string[]>(['']);
     const [steps, setSteps] = useState<string[]>(['']);
@@ -29,6 +31,17 @@ const Recipe = () => {
 
   return (
     <div className='pt-10 px-5 w-full'>
+        <Modal show={openModal} onClose={() => setOpenModal(false)}>
+        <ModalHeader>Tags</ModalHeader>
+        <ModalBody>
+          <div className="space-y-6">
+            Search for tags
+          </div>
+        </ModalBody>
+        <ModalFooter>
+          <Button onClick={() => setOpenModal(false)}>Back</Button>
+        </ModalFooter>
+      </Modal>
         <div className='border-b-1 border-solid border-slate-300 p-2 text-2xl font-semibold text-center'>
             New Recipe
         </div>
@@ -86,7 +99,7 @@ const Recipe = () => {
         </div>
         <div className='border-b-1 border-solid border-slate-300 p-2'>
         <p className='font-semibold text-xl text-center'>Tags</p>
-        <div className='flex justify-center items-center font-semibold hover:opacity-50 underline text-blue-600'><img className='h-6 w-6 pr-2' src="../assets/plus-circle.svg" alt="add" /><p>Add Tags</p></div>
+        <div onClick={() => setOpenModal(true)} className='flex justify-center items-center font-semibold hover:opacity-50 underline text-blue-600'><img className='h-6 w-6 pr-2' src="../assets/plus-circle.svg" alt="add" /><p>Add Tags</p></div>
         </div>
         <div className='p-2 flex justify-end'>
             <Button outline className='mx-1 w-[100px]'>Draft</Button>
